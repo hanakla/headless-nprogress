@@ -41,8 +41,7 @@ class HeadlessNProgress {
   public start() {
     const work = () => {
       setTimeout(() => {
-        if (this.isStarted()) return;
-
+        if (!this.isStarted()) return;
         this.inc();
         work();
       }, this.settings.trickleSpeed);
