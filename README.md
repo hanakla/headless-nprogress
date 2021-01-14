@@ -11,7 +11,7 @@ yarn add @hanakla/headless-nprogress
 Example with React
 
 ```tsx
-import NProgress from "@hanakla/headless-nprogress"
+import { NProgress } from "@hanakla/headless-nprogress"
 
 // some router event handler
 router.events.on('routeChangeStart', () => NProgress.start())
