@@ -1,3 +1,5 @@
+/* Based on (nprogress)[https://github.com/rstacruz/nprogress] code */
+
 interface Options {
   minimum: number;
   speed: number;
