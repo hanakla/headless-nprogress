@@ -1,4 +1,5 @@
 /src
 /example
+CHANGELOG.md
 .editorconfig
 tsconfig.json
