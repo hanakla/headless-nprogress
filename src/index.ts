@@ -130,4 +130,4 @@ const queue = (() => {
 })();
 
 const instance = new HeadlessNProgress();
-export { instance as default };
+export { instance as NProgress };
