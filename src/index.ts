@@ -52,9 +52,9 @@ class HeadlessNProgress {
     return this;
   }
 
-  public done(force: boolean) {
+  public done(force?: boolean) {
     if (!force && this.isStarted()) return this;
-    return this.inc(0.3 + 0.5 * Math.random())?.set(1);
+    return this.inc(0.3 + 0.5 * Math.random()).set(1);
   }
 
   public set(n: number) {
@@ -82,11 +82,9 @@ class HeadlessNProgress {
   }
 
   public inc(amount?: number) {
-    let n = this.status;
+    let n = this.status ?? 0;
 
-    if (n == null) {
-      return this.start();
-    } else if (n > 1) {
+    if (n > 1) {
       return this;
     } else {
       if (typeof amount !== "number") {
