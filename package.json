@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src/index.ts --dts --format esm,cjs",
-    "prepublishOnly": "yarn build"
+    "clean": "rm -rf dist",
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "devDependencies": {
     "husky": "^4.3.7",
