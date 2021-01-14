@@ -1,4 +1,4 @@
-import NProgress from "../dist/index";
+import { NProgress } from "../dist/index";
 
 document.addEventListener("DOMContentLoaded", () => {
   const status = document.querySelector("#status")! as HTMLElement;
@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       bar.style.opacity = "1";
     }
     if (state.finished) {
-      bar.style.opacity = "0";
+      setTimeout(() => (bar.style.opacity = "0"), 100);
+      setTimeout(() => (bar.style.width = "0"), 500);
     }
   });
 
